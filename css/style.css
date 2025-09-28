@@ -39,7 +39,6 @@
     transition: all 0.3s ease;
 }
 
-/* Remove blue color from dropdown items */
 .dropdown-item:hover,
 .dropdown-item:focus {
     background-color: #f8f9fa !important;
@@ -73,7 +72,7 @@
     left: 0;
     width: 0;
     height: 0;
-    background-color: rgba(20, 109, 199, 0.1);
+    background-color: rgba(161, 194, 189, 0.1);
     z-index: 1;
     border-radius: 6px;
     transition: 0.7s;
@@ -85,7 +84,7 @@
     right: 0;
     width: 0;
     height: 0;
-    background-color: rgba(20, 109, 199, 0.1);
+    background-color: rgba(161, 194, 189, 0.1);
     z-index: 1;
     border-radius: 6px;
     transition: 0.7s;
@@ -120,6 +119,18 @@
 .news-image {
     transition: 0.3s;
 }
+.news-card{
+  box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+.social{
+  box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
+}
+.social:hover {
+    transform: scale(1.02);
+}
 .news-card:hover .news-image {
     transform: scale(1.1);
 }
@@ -139,3 +150,41 @@
         width: 100%; 
     }
 }
+
+    #copyToggle { position: absolute; left: -9999px; }
+
+    .copied-msg { display: none; }
+
+    #copyToggle:checked ~ .card .copied-msg {
+      display: block !important;
+    }
+
+    .modal-custom { display: none; position: fixed; inset: 0; z-index: 1050; align-items: center; justify-content: center; }
+
+    .modal-custom .backdrop {
+      position: absolute; inset: 0;
+      background: rgba(0,0,0,0.5);
+    }
+
+    .modal-custom .modal-window {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 420px;
+      margin: 1.5rem;
+      border-radius: .5rem;
+      overflow: hidden;
+      box-shadow: 0 0.5rem 1rem rgba(0,0,0,.25);
+      top:-250px
+    }
+
+    #copyToggle:checked ~ .modal-custom { display: flex; }
+
+    .modal-custom .modal-window .modal-body { padding: 1rem; }
+    .modal-custom .modal-window .modal-header,
+    .modal-custom .modal-window .modal-footer { padding: .75rem 1rem; }
+
+    .copied-msg { width: 25%; min-width: 150px; }
+    @media (max-width: 576px) {
+      .copied-msg { width: 100%; }
+    }
