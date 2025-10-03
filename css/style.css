@@ -151,11 +151,19 @@
     }
 }
 
-    #copyToggle { position: absolute; left: -9999px; }
+    #copyToggle1 { position: absolute; left: -9999px; }
+    #copyToggle2 { position: absolute; left: -9999px; }
+    #copyToggle3 { position: absolute; left: -9999px; }
 
     .copied-msg { display: none; }
 
-    #copyToggle:checked ~ .card .copied-msg {
+    #copyToggle1:checked ~ .card .copied-msg {
+      display: block !important;
+    }
+    #copyToggle2:checked ~ .card .copied-msg {
+      display: block !important;
+    }
+    #copyToggle3:checked ~ .card .copied-msg {
       display: block !important;
     }
 
@@ -178,7 +186,9 @@
       top:-250px
     }
 
-    #copyToggle:checked ~ .modal-custom { display: flex; }
+    #copyToggle1:checked ~ .modal-custom { display: flex; }
+    #copyToggle2:checked ~ .modal-custom { display: flex; }
+    #copyToggle3:checked ~ .modal-custom { display: flex; }
 
     .modal-custom .modal-window .modal-body { padding: 1rem; }
     .modal-custom .modal-window .modal-header,
