@@ -28,6 +28,25 @@
   }
 }
 
+.gradient-text {
+  font-weight: bold;
+  background: linear-gradient(180deg , #A1C2BD , #708993); /* gradient colors */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.gradient-text-header {
+  font-weight: bold;
+  background: linear-gradient(180deg , #A1C2BD , #E7F2EF); /* gradient colors */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+
 .nav-link{
   transition: .3s;
 }
